@@ -2,18 +2,18 @@
 //juanlov4321@gmail.com
 //whatsapp: +573002100794
 //Se es modificable el código a su gusto.
-import java.util.Scanner;
+import java.util.Scanner;// se usa la libreria Scanner para que más adelante se cree el objeto y el usuario pueda digitar lo que se le va a pedir.
 
 class Calculadora
 {
 	public static void main(String[] args) 
 	{
-	 Scanner tc = new Scanner(System.in); 
+	 	Scanner tc = new Scanner(System.in); //se crea un objeto Scanner para datos que seran introducidos por teclado
 		//variables para menu
-		int opcion;
-		String name1;
-		double result=0,cant=0;
-		boolean salir = false;	
+		int opcion;//variable entera para opcion para después ser usada en el switch
+		String name1;//se llama el metodo llamado nombre el cual el usuario digita su nombre 
+		double result=0,cant=0;//Variables universales para resultado y cantidad
+		boolean salir = false;//variable boolean para el while y el case 5
 		System.out.println("Escribe t\u00fa nombre");
 		name1 = tc.nextLine();
 		System.out.println("\n");
@@ -23,6 +23,7 @@ class Calculadora
 
 	while (!salir) 
 		{
+			//Se le menciona al usuario las opciones de la calculadora
 			System.out.println("*******************************************************");                                                                                                                                                                                      
 			System.out.println("\t▒█▀▀█ █▀▀█ █   █▀▀ █  █ █   █▀▀█ █▀▀▄ █▀▀█ █▀▀█ █▀▀█ ");
 			System.out.println("\t▒█    █▄▄█ █   █   █  █ █   █▄▄█ █  █ █  █ █▄▄▀ █▄▄█ ");
@@ -33,7 +34,7 @@ class Calculadora
 			System.out.println("\t*Opci\u00f3n 3 Multiplicar");
 			System.out.println("\t*Opci\u00f3n 4 Dividir");
 			System.out.println("\t*Opci\u00f3n 5 Salir");
-			
+		
 			try
 			{
 				System.out.println("Digita una de las opciones");
@@ -41,6 +42,8 @@ class Calculadora
 				opcion = tc.nextInt();
 				switch (opcion) 
 				{
+					//en todos las operaciones básicas solo se pueden digitar dos números 
+
 					case 1:
 						double suma=0,resum=0;
 						System.out.println("***********************************************************");
@@ -132,10 +135,13 @@ class Calculadora
 			}
 		}
 	}//fin del metodo menu 
+	//se crea un metodo para que el usuario pueda degitar el nombre mas arriba, el nombre aparezca en varias secciones
+	//de la calculadora
 	public static String nombre(String name)
 	{
 		return name;
 	}
+	//se crea este metodo para que se ejecute cuando termine el programa
 	public static void salida()
 	{
 		System.out.println("***********************************************************");
